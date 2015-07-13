@@ -1,6 +1,21 @@
+"""
+Given: Two DNA strings s and t of equal length (not exceeding 1 kbp).
+
+Return: The Hamming distance dH(s,t), which is the number of corresponding symbols 
+that differ in s and t.
+
+Sample:
+GAGCCTACTAACGGGAT
+CATCGTAATGACGGCCT
+
+Expected Output:
+7
+"""
+
 file = open('/Users/Anuar_the_great/desktop/rosalind_hamm.txt')
 line1 = file.readline()
 line2 = file.readline()
+file.close()
 
 def point_mutations1():
 	mutations = 0

@@ -1,17 +1,20 @@
 """
 Given: Two DNA strings s (DNA strand) and t (motif).
 
-Return: All locations of t as a substring of s.
+Return: All locations of t as a substring of s. (non-pythonic locations, added by 1)
+
+Sample:
+GATATATGCATATACTT
+ATAT
+
+Sample Output:
+2 4 10
 """
 
-#file = open('/Users/Anuar_the_great/desktop/rosalind_subs(1).txt')
-#dna = file.readline()
-#motif = file.readline()
-#file.close()
-
-# SAMPLE:
-dna = 'GATATATGCATATACTT'
-motif = 'ATAT'
+file = open('/Users/Anuar_the_great/desktop/rosalind_subs(1).txt')
+dna = file.readline()
+motif = file.readline()
+file.close()
 
 def motifs1():
 	lists = []
