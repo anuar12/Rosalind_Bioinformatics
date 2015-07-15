@@ -31,7 +31,7 @@ file = open('/Users/Anuar_the_great/desktop/rosalind_grph(1).txt')
 data = file.readlines()
 file.close()
 	
-def adjacency_list(dict):
+def adjacency_list1(dict):
 	leest = []
 	for key1, value1 in dict.items():
 		for key2, value2 in dict.items():
@@ -41,8 +41,13 @@ def adjacency_list(dict):
 	
 	return leest
 	
+# More optimized code (same logic) but uses list comprehension
+def adjacency_list2(dict):
+	return [[key1, key2] for key1, value1 in dict.items() for key2, value2 in dict.items()\
+		    if key1 != key2 if value1.endswith(value2[0:3])]
 
 dict = read_fasta(data)
-leest = adjacency_list(dict)
-for nodes in leest:
-	print nodes[0], nodes[1]
+leest1 = adjacency_list1(dict)
+leest2 = adjacency_list2(dict)
+for nodes1, nodes2 in zip(leest1, leest2):
+	print nodes1[0], nodes1[1], '; ', nodes2[0], nodes2[1]
