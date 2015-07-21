@@ -14,6 +14,7 @@ import pandas as pd
 
 file = open('/Users/Anuar_the_great/desktop/rosalind_prot.txt')
 data = file.read()
+file.close()
 
 def splitter(str, num):
     return [ str[start:start+num] for start in range(0, len(str), num) ]
@@ -29,7 +30,6 @@ def RNA_to_protein():
 	triples = splitter(data, 3)
 	for triple in triples:
 		protein_code += codons_series[triple]
-	file.close()
 	return protein_code
 	
 

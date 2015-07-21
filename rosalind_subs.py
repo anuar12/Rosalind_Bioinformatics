@@ -11,7 +11,7 @@ Sample Output:
 2 4 10
 """
 
-file = open('/Users/Anuar_the_great/desktop/rosalind_subs(1).txt')
+file = open('/Users/Anuar_the_great/desktop/rosalind_subs.txt')
 dna = file.readline()
 motif = file.readline()
 file.close()

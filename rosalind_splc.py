@@ -33,8 +33,8 @@ def RNA_splicing(data, main_dna):
 file = open('/Users/Anuar_the_great/desktop/Data_files/rosalind_splc.txt')
 main_dna = [file.readline()[1:].strip('\n'), file.readline().strip('\n')]
 data = file.readlines()
-print type(data)
 file.close()
+
 # Alternative version for read_FASTA (returns a list instead):
 # no_introns = filter(lambda line: line[0] != '>', data)
 data = read_FASTA(data)
