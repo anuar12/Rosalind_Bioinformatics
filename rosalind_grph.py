@@ -25,7 +25,7 @@ Rosalind_0498 Rosalind_0442
 Rosalind_2391 Rosalind_2323
 """
 
-from reader_fasta import read_fasta
+from reader_FASTA import read_FASTA
 
 file = open('/Users/Anuar_the_great/desktop/rosalind_grph(1).txt')
 data = file.readlines()
@@ -41,12 +41,12 @@ def adjacency_list1(dict):
 	
 	return leest
 	
-# More optimized code (same logic) but uses list comprehension
+# More optimized code (same logic but uses list comprehension)
 def adjacency_list2(dict):
 	return [[key1, key2] for key1, value1 in dict.items() for key2, value2 in dict.items()\
 		    if key1 != key2 if value1.endswith(value2[0:3])]
 
-dict = read_fasta(data)
+dict = read_FASTA(data)
 leest1 = adjacency_list1(dict)
 leest2 = adjacency_list2(dict)
 for nodes1, nodes2 in zip(leest1, leest2):

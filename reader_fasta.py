@@ -1,7 +1,8 @@
 # Reads the FASTA formated data that is used for naming genetic strings for DBs
 
-def read_fasta(data):
+def read_FASTA(data):
 	dict1 = {}
+	#for line in data.splitlines():   # If your data is a sample string
 	for line in data:
 		if line[0] == '>':
 			id = line[1:]
