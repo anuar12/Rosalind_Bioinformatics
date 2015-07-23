@@ -11,11 +11,6 @@ Sample Output:
 2 4 10
 """
 
-file = open('/Users/Anuar_the_great/desktop/rosalind_subs.txt')
-dna = file.readline()
-motif = file.readline()
-file.close()
-
 def motifs1():
 	lists = []
 	for i in range(len(motif)):
@@ -36,6 +31,11 @@ def motifs2():
 	position_set.remove(0)
 	return position_set
 
+
+file = open('/Users/Anuar_the_great/desktop/rosalind_subs.txt')
+dna = file.readline()
+motif = file.readline()
+file.close()
 
 motifs1()
 print ''

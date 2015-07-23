@@ -17,6 +17,9 @@ ATACA
 Sample Output:
 AC     (or TA)
 """
+# Brute Force (Naive Search) solution presented.
+# For more optimized algorithm, see Rabin–Karp algorithm which is the most suited
+# for multiple pattern search that uses hashed values.
 
 from reader_FASTA import read_FASTA
 

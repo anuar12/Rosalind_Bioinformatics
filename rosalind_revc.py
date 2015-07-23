@@ -12,13 +12,13 @@ ACCGGGTTTT
 
 from string import maketrans
 
-file = open('/Users/Anuar_the_great/desktop/rosalind_revc.txt')
-data = file.read()
-file.close()
 
-def complement_pairs():
+def complement_pairs(data):
 	trans_table = maketrans('ATCG', 'TAGC')
 	return data[::-1].translate(trans_table)
 	
-
-print complement_pairs()
+filepath = '/Users/Anuar_the_great/desktop/code/rosalind_repo/data_files/rosalind_revc.txt'
+file = open(filepath)
+data = file.read()
+file.close()
+print complement_pairs(data)
